@@ -1,0 +1,23 @@
+# Regression Project
+
+## What I Did
+Built regression models on a housing dataset to predict **median_house_value** from features (e.g., median_income, rooms, households, etc.).
+
+## Why I Did It
+Quantify drivers of price and compare **linear vs non-linear** approaches for better forecasting.
+
+## How I Did It
+- Cleaned data: imputed missing values (median), removed outliers (e.g., 500k cap), selected features.
+- EDA: histograms, boxplot, scatter-matrix, correlation heatmap.
+- Models: **Linear Regression**, **Ridge Regression**, **Random Forest Regressor**.
+- Split train/test; evaluated with **R², RMSE, MAE**.
+
+## Difficult/Critical Moments
+- Addressing the price **ceiling at $500k** to avoid bias.
+- **Multicollinearity** across room/household/population variables → used Ridge.
+- Balancing interpretability (linear) vs accuracy (tree ensemble).
+
+## What I Found
+- **median_income** is the strongest predictor (high positive correlation).
+- **Random Forest** outperformed linear models on test data (captures non-linear patterns).
+- Linear/Ridge stayed interpretable but underfit extremes; tree model gave best generalization.
